@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: fait un ping
+    ping:
+  - name: copie un fichier vers l'ensemble des hosts
+    copy:
+      src: file.txt
+      dest: /tmp/file.txt

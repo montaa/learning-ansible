@@ -1,0 +1,5 @@
+ansible => obligation d'avoir un serveur master
+communication avec les serveurs noeuds via ssh
+
+=> simplicité => pas d'agent à installer
+              => codé via yaml => proche de l'anglais

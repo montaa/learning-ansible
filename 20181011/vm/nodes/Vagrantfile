@@ -1,0 +1,44 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box_check_update = false
+  config.vm.synced_folder "./", "/vagrant", disabled:true
+  config.vm.synced_folder "./", "/home/vagrant/sync", disabled:true
+
+  config.vm.define "redhat" do |centos|
+    centos.vm.box = "centos/7"
+    centos.vm.hostname = "ansible-redhat.vm"
+    centos.vm.network "private_network", ip:"192.168.33.100"
+	centos.vm.network "forwarded_port", guest: 22, host: 10001, id: 'ssh'	
+    centos.vm.provider "virtualbox" do |vb|
+      vb.name = "ansible-redhat.vm"
+      vb.cpus = 2
+      vb.memory = 2*1024
+    end
+    centos.vm.provision "shell",  inline: <<-SHELL
+		yum -y install epel-release
+		yum -y install python python-pip
+		yum -y install python-devel
+		pip install --upgrade pip
+		yum -y groupinstall 'development tools'
+		pip install ansible==2.1.0.0
+   SHELL
+  end
+
+  config.vm.define "debian" do |ubuntu|
+    ubuntu.vm.box = "ubuntu/xenial64"
+    ubuntu.vm.hostname = "ansible-debian.vm"
+    ubuntu.vm.network "private_network", ip:"192.168.33.200"
+	ubuntu.vm.network "forwarded_port", guest: 22, host: 10002, id: 'ssh'	
+    ubuntu.vm.provider "virtualbox" do |vb|
+      vb.name = "ansible-debian.vm"
+      vb.cpus = 2
+      vb.memory = 2*1024
+    end
+    ubuntu.vm.provision "shell", inline: "sudo apt-get -y update && sudo apt-get -y install python2.7 && sudo ln -s /usr/bin/python2.7 /usr/bin/python"
+  end
+
+end
+

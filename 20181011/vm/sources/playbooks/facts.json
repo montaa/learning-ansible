@@ -1,0 +1,2121 @@
+ansible-debian.vm | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.2.15", 
+            "192.168.33.200"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::e1:e1ff:fed1:e477", 
+            "fe80::a00:27ff:fe40:392"
+        ], 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-4.4.0-137-generic", 
+            "console": "ttyS0", 
+            "ro": true, 
+            "root": "LABEL=cloudimg-rootfs"
+        }, 
+        "ansible_date_time": {
+            "date": "2018-10-25", 
+            "day": "25", 
+            "epoch": "1540475132", 
+            "hour": "13", 
+            "iso8601": "2018-10-25T13:45:32Z", 
+            "iso8601_basic": "20181025T134532494836", 
+            "iso8601_basic_short": "20181025T134532", 
+            "iso8601_micro": "2018-10-25T13:45:32.494963Z", 
+            "minute": "45", 
+            "month": "10", 
+            "second": "32", 
+            "time": "13:45:32", 
+            "tz": "UTC", 
+            "tz_offset": "+0000", 
+            "weekday": "Thursday", 
+            "weekday_number": "4", 
+            "weeknumber": "43", 
+            "year": "2018"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "10.0.2.15", 
+            "alias": "enp0s3", 
+            "broadcast": "10.0.2.255", 
+            "gateway": "10.0.2.2", 
+            "interface": "enp0s3", 
+            "macaddress": "02:e1:e1:d1:e4:77", 
+            "mtu": 1500, 
+            "netmask": "255.255.255.0", 
+            "network": "10.0.2.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_devices": {
+            "sda": {
+                "holders": [], 
+                "host": "SCSI storage controller: LSI Logic / Symbios Logic 53c1030 PCI-X Fusion-MPT Dual Ultra320 SCSI", 
+                "model": "HARDDISK", 
+                "partitions": {
+                    "sda1": {
+                        "sectors": "20969439", 
+                        "sectorsize": 512, 
+                        "size": "10.00 GB", 
+                        "start": "2048"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "deadline", 
+                "sectors": "20971520", 
+                "sectorsize": "512", 
+                "size": "10.00 GB", 
+                "support_discard": "0", 
+                "vendor": "VBOX"
+            }, 
+            "sdb": {
+                "holders": [], 
+                "host": "SCSI storage controller: LSI Logic / Symbios Logic 53c1030 PCI-X Fusion-MPT Dual Ultra320 SCSI", 
+                "model": "HARDDISK", 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "deadline", 
+                "sectors": "20480", 
+                "sectorsize": "512", 
+                "size": "10.00 MB", 
+                "support_discard": "0", 
+                "vendor": "VBOX"
+            }
+        }, 
+        "ansible_distribution": "Ubuntu", 
+        "ansible_distribution_major_version": "16", 
+        "ansible_distribution_release": "xenial", 
+        "ansible_distribution_version": "16.04", 
+        "ansible_dns": {
+            "nameservers": [
+                "10.0.2.3"
+            ], 
+            "search": [
+                "home"
+            ]
+        }, 
+        "ansible_domain": "vm", 
+        "ansible_enp0s3": {
+            "active": true, 
+            "device": "enp0s3", 
+            "ipv4": {
+                "address": "10.0.2.15", 
+                "broadcast": "10.0.2.255", 
+                "netmask": "255.255.255.0", 
+                "network": "10.0.2.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::e1:e1ff:fed1:e477", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "02:e1:e1:d1:e4:77", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:03.0", 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_enp0s8": {
+            "active": true, 
+            "device": "enp0s8", 
+            "ipv4": {
+                "address": "192.168.33.200", 
+                "broadcast": "192.168.33.255", 
+                "netmask": "255.255.255.0", 
+                "network": "192.168.33.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fe40:392", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:40:03:92", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:08.0", 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_env": {
+            "HOME": "/home/vagrant", 
+            "LANG": "en_US.UTF-8", 
+            "LC_ALL": "en_US.UTF-8", 
+            "LC_MESSAGES": "en_US.UTF-8", 
+            "LOGNAME": "vagrant", 
+            "MAIL": "/var/mail/vagrant", 
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games", 
+            "PWD": "/home/vagrant", 
+            "SHELL": "/bin/bash", 
+            "SHLVL": "1", 
+            "SSH_CLIENT": "192.168.33.1 49931 22", 
+            "SSH_CONNECTION": "192.168.33.1 49931 192.168.33.200 22", 
+            "SSH_TTY": "/dev/pts/1", 
+            "TERM": "xterm", 
+            "USER": "vagrant", 
+            "XDG_RUNTIME_DIR": "/run/user/1000", 
+            "XDG_SESSION_ID": "27", 
+            "_": "/bin/sh"
+        }, 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "ansible-debian.vm", 
+        "ansible_gather_subset": [
+            "hardware", 
+            "network", 
+            "virtual"
+        ], 
+        "ansible_hostname": "ansible-debian", 
+        "ansible_interfaces": [
+            "lo", 
+            "enp0s3", 
+            "enp0s8"
+        ], 
+        "ansible_kernel": "4.4.0-137-generic", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "broadcast": "host", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "type": "loopback"
+        }, 
+        "ansible_lsb": {
+            "codename": "xenial", 
+            "description": "Ubuntu 16.04.5 LTS", 
+            "id": "Ubuntu", 
+            "major_release": "16", 
+            "release": "16.04"
+        }, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "618259a07e89407d8c5f8445301fe826", 
+        "ansible_memfree_mb": 1738, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 1911, 
+                "used": 89
+            }, 
+            "real": {
+                "free": 1738, 
+                "total": 2000, 
+                "used": 262
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 0, 
+                "total": 0, 
+                "used": 0
+            }
+        }, 
+        "ansible_memtotal_mb": 2000, 
+        "ansible_mounts": [
+            {
+                "device": "/dev/sda1", 
+                "fstype": "ext4", 
+                "mount": "/", 
+                "options": "rw,relatime,data=ordered", 
+                "size_available": 9200324608, 
+                "size_total": 10340831232, 
+                "uuid": "be5d9142-ab45-45cf-9fb2-5196beea25f4"
+            }
+        ], 
+        "ansible_nodename": "ansible-debian", 
+        "ansible_os_family": "Debian", 
+        "ansible_pkg_mgr": "apt", 
+        "ansible_processor": [
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz", 
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz"
+        ], 
+        "ansible_processor_cores": 2, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 2, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "NA", 
+        "ansible_product_uuid": "NA", 
+        "ansible_product_version": "1.2", 
+        "ansible_python": {
+            "executable": "/usr/bin/python", 
+            "has_sslcontext": true, 
+            "type": "CPython", 
+            "version": {
+                "major": 2, 
+                "micro": 12, 
+                "minor": 7, 
+                "releaselevel": "final", 
+                "serial": 0
+            }, 
+            "version_info": [
+                2, 
+                7, 
+                12, 
+                "final", 
+                0
+            ]
+        }, 
+        "ansible_python_version": "2.7.12", 
+        "ansible_selinux": false, 
+        "ansible_service_mgr": "systemd", 
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAKbsGq6FhnW/br15vGyo/It2eqzxbhUrmMdlrv2n5Lit9/Mv6QZ7RhinZXjHRvv7c1qE5FMOUtxgu4HxSQDrxuF3fmnl4OPUD20W2PY/D8WRf/1ewW7wsRNDTfhE7wnOU7GJNNwUi+WTi1gxqKtYg4EzoPV742zkoyMaVh2dqj8zAAAAFQCvxvJ/kFkl8ynCORNAZnrIFV7WrwAAAIB3X6icRQji9nvV2hey1S4ufgGfAH8vHHyCvWWrlAJ7fEMbIHsLl5OAAeFcGtf+ND0d4+mCXQkVDxDUDT8D2xOqSOWLtekMtbIlLNu0VwSizALfGnZgcdqiL31Icd8hS+aAC8s7GFU+fJhtfEcWGUrHINVum72spv9LHWe9ecs8VwAAAIAmX6a93f085R5Fk26aX2Si/uSr40cfiWLl8gPHNU7K1vOg2IapZdFTkhtHGVxHu8ZModLnXcBg/bTZ2vreDtlb195MtssudgKn41+qDU7hOHh5/lFBO9bfalAEQdZjuSyfOyzl5HRQW1b9sNZNoNWkEB044dzrqqBXPvQffygI9Q==", 
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMpn0AnRFKuxirYeRSDbW68vWBVja/0iryLbKh4aNAuDs8+37vmpIE1sUrOdH63IOvVQ12Z7FQFW8tpdiqgQM7A=", 
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIPcQg+CDh6s9YF0KIXq0uIlF+vJXti2V8ESNOYrRf7sm", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDNg8SMTSVf1YKYTC+19mBN4AbL+kuOuKWvD/MqTuDzFSyJpskwM6ohcdTQEva0vETYplww+fUtnj2cn1KWn/gG7wGcRcjdw930YJWJPf51f+jKkk+DlxVhqb3VF2hNR8ep0JnEcruZfIlyLToyfd58nVMijflDOskevlecxwmIkQgMCnDcUUit0+1eBWW4T9CQojAeVuIGMdB7qO/K2ccJQOuCLMHBeISRGTZGZRBHvlLKb2D34ovmw96oPbyyAziIEctSTiwwljGC6q1Lmr76NE+BNPsmBymGJY1YREQ3PD6b/KEEVUQ0qgB5SiKKBa8AcPFZ61JizzQGiChInZ5z", 
+        "ansible_swapfree_mb": 0, 
+        "ansible_swaptotal_mb": 0, 
+        "ansible_system": "Linux", 
+        "ansible_system_capabilities": [
+            ""
+        ], 
+        "ansible_system_capabilities_enforced": "True", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_uptime_seconds": 17617, 
+        "ansible_user_dir": "/home/vagrant", 
+        "ansible_user_gecos": ",,,", 
+        "ansible_user_gid": 1000, 
+        "ansible_user_id": "vagrant", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 1000, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "virtualbox", 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+ansible-redhat.vm | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.2.15", 
+            "192.168.33.100"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::5054:ff:fec0:42d5", 
+            "fe80::a00:27ff:fe34:8530"
+        ], 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-3.10.0-862.14.4.el7.x86_64", 
+            "LANG": "en_US.UTF-8", 
+            "biosdevname": "0", 
+            "console": "ttyS0,115200n8", 
+            "crashkernel": "auto", 
+            "elevator": "noop", 
+            "net.ifnames": "0", 
+            "no_timer_check": true, 
+            "ro": true, 
+            "root": "UUID=b5b20816-947c-4616-b15a-abaae4afe31b"
+        }, 
+        "ansible_date_time": {
+            "date": "2018-10-18", 
+            "day": "18", 
+            "epoch": "1539894287", 
+            "hour": "20", 
+            "iso8601": "2018-10-18T20:24:47Z", 
+            "iso8601_basic": "20181018T202447153819", 
+            "iso8601_basic_short": "20181018T202447", 
+            "iso8601_micro": "2018-10-18T20:24:47.153946Z", 
+            "minute": "24", 
+            "month": "10", 
+            "second": "47", 
+            "time": "20:24:47", 
+            "tz": "UTC", 
+            "tz_offset": "+0000", 
+            "weekday": "Thursday", 
+            "weekday_number": "4", 
+            "weeknumber": "42", 
+            "year": "2018"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "10.0.2.15", 
+            "alias": "eth0", 
+            "broadcast": "10.0.2.255", 
+            "gateway": "10.0.2.2", 
+            "interface": "eth0", 
+            "macaddress": "52:54:00:c0:42:d5", 
+            "mtu": 1500, 
+            "netmask": "255.255.255.0", 
+            "network": "10.0.2.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_devices": {
+            "sda": {
+                "holders": [], 
+                "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sda1": {
+                        "sectors": "83884032", 
+                        "sectorsize": 512, 
+                        "size": "40.00 GB", 
+                        "start": "2048"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "noop", 
+                "sectors": "83886080", 
+                "sectorsize": "512", 
+                "size": "40.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA"
+            }
+        }, 
+        "ansible_distribution": "CentOS", 
+        "ansible_distribution_major_version": "7", 
+        "ansible_distribution_release": "Core", 
+        "ansible_distribution_version": "7.5.1804", 
+        "ansible_dns": {
+            "nameservers": [
+                "10.0.2.3"
+            ], 
+            "search": [
+                "home", 
+                "vm"
+            ]
+        }, 
+        "ansible_domain": "vm", 
+        "ansible_env": {
+            "HOME": "/home/vagrant", 
+            "LANG": "en_US.UTF-8", 
+            "LC_ALL": "en_US.UTF-8", 
+            "LC_MESSAGES": "en_US.UTF-8", 
+            "LESSOPEN": "||/usr/bin/lesspipe.sh %s", 
+            "LOGNAME": "vagrant", 
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:", 
+            "MAIL": "/var/mail/vagrant", 
+            "PATH": "/usr/local/bin:/usr/bin", 
+            "PWD": "/home/vagrant", 
+            "SELINUX_LEVEL_REQUESTED": "", 
+            "SELINUX_ROLE_REQUESTED": "", 
+            "SELINUX_USE_CURRENT_RANGE": "", 
+            "SHELL": "/bin/bash", 
+            "SHLVL": "2", 
+            "SSH_CLIENT": "192.168.33.1 49932 22", 
+            "SSH_CONNECTION": "192.168.33.1 49932 192.168.33.100 22", 
+            "SSH_TTY": "/dev/pts/0", 
+            "TERM": "xterm", 
+            "USER": "vagrant", 
+            "XDG_RUNTIME_DIR": "/run/user/1000", 
+            "XDG_SESSION_ID": "28", 
+            "_": "/usr/bin/python"
+        }, 
+        "ansible_eth0": {
+            "active": true, 
+            "device": "eth0", 
+            "ipv4": {
+                "address": "10.0.2.15", 
+                "broadcast": "10.0.2.255", 
+                "netmask": "255.255.255.0", 
+                "network": "10.0.2.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::5054:ff:fec0:42d5", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "52:54:00:c0:42:d5", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:03.0", 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_eth1": {
+            "active": true, 
+            "device": "eth1", 
+            "ipv4": {
+                "address": "192.168.33.100", 
+                "broadcast": "192.168.33.255", 
+                "netmask": "255.255.255.0", 
+                "network": "192.168.33.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fe34:8530", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:34:85:30", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:08.0", 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "ansible-redhat.vm", 
+        "ansible_gather_subset": [
+            "hardware", 
+            "network", 
+            "virtual"
+        ], 
+        "ansible_hostname": "ansible-redhat", 
+        "ansible_interfaces": [
+            "lo", 
+            "eth1", 
+            "eth0"
+        ], 
+        "ansible_kernel": "3.10.0-862.14.4.el7.x86_64", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "broadcast": "host", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "type": "loopback"
+        }, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "5720c63e47294f5097bae018b89bbf63", 
+        "ansible_memfree_mb": 1375, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 1696, 
+                "used": 142
+            }, 
+            "real": {
+                "free": 1375, 
+                "total": 1838, 
+                "used": 463
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 2047, 
+                "total": 2047, 
+                "used": 0
+            }
+        }, 
+        "ansible_memtotal_mb": 1838, 
+        "ansible_mounts": [
+            {
+                "device": "/dev/sda1", 
+                "fstype": "ext4", 
+                "mount": "/", 
+                "options": "rw,seclabel,relatime,data=ordered", 
+                "size_available": 36815335424, 
+                "size_total": 42140401664, 
+                "uuid": "b5b20816-947c-4616-b15a-abaae4afe31b"
+            }
+        ], 
+        "ansible_nodename": "ansible-redhat.vm", 
+        "ansible_os_family": "RedHat", 
+        "ansible_pkg_mgr": "yum", 
+        "ansible_processor": [
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz", 
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz"
+        ], 
+        "ansible_processor_cores": 2, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 2, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "NA", 
+        "ansible_product_uuid": "NA", 
+        "ansible_product_version": "1.2", 
+        "ansible_python": {
+            "executable": "/usr/bin/python", 
+            "has_sslcontext": true, 
+            "type": "CPython", 
+            "version": {
+                "major": 2, 
+                "micro": 5, 
+                "minor": 7, 
+                "releaselevel": "final", 
+                "serial": 0
+            }, 
+            "version_info": [
+                2, 
+                7, 
+                5, 
+                "final", 
+                0
+            ]
+        }, 
+        "ansible_python_version": "2.7.5", 
+        "ansible_selinux": {
+            "config_mode": "enforcing", 
+            "mode": "enforcing", 
+            "policyvers": 31, 
+            "status": "enabled", 
+            "type": "targeted"
+        }, 
+        "ansible_service_mgr": "systemd", 
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNdFjK/1ZAP9UQEoepUVZB5tzNgN0Ecm5viST6f336pEAP3+/qJVYMt+CaYH1Ou8peibGgemFzAz8QS+BUSJUI8=", 
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAILuxHubi68hG3yPtROPqXS43HNgy/IYBoHhQhQrLnyCt", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDVmyrrVaZXTSmlraaH4YzkQIP0NkGwF/PnHbuF/sIO/b3SD2Cp5nxBDCPn6u40h9c555Ox+UElpNTgqX6vt7P67q/nWwg6fCdZwD4HbKhhzh+5FZbcDSNNcnl9FOIHw3xPqOdNLcTw74FvZpA6jwXY+Yzqg2ZcfCGhag/nQXyNHnoH/Sbvo3LdoHmZ30Hz7jtmk0IbRqfuOeDxbBBABKM3L+bSzeoovK778CeRl3H12szjSuINdzczaVOIJyIuhi/z2wB0drYXwShJ/urKF471t9s0BGVcNzAys6sQKl3G0oDdrt8/S1cmn/8nphkYLdE9NcDBi6dppq4HpN0kJPkP", 
+        "ansible_swapfree_mb": 2047, 
+        "ansible_swaptotal_mb": 2047, 
+        "ansible_system": "Linux", 
+        "ansible_system_capabilities": [
+            ""
+        ], 
+        "ansible_system_capabilities_enforced": "True", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_uptime_seconds": 18817, 
+        "ansible_user_dir": "/home/vagrant", 
+        "ansible_user_gecos": "vagrant", 
+        "ansible_user_gid": 1000, 
+        "ansible_user_id": "vagrant", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 1000, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "virtualbox", 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.2.15", 
+            "172.17.0.1"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::a00:27ff:feb5:132e"
+        ], 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-3.13.0-158-generic", 
+            "console": "ttyS0", 
+            "ro": true, 
+            "root": "UUID=dcb34e16-5a0e-49f1-8151-9f26a5c7c027"
+        }, 
+        "ansible_date_time": {
+            "date": "2018-10-25", 
+            "day": "25", 
+            "epoch": "1540475134", 
+            "hour": "13", 
+            "iso8601": "2018-10-25T13:45:34Z", 
+            "iso8601_basic": "20181025T134534517025", 
+            "iso8601_basic_short": "20181025T134534", 
+            "iso8601_micro": "2018-10-25T13:45:34.517087Z", 
+            "minute": "45", 
+            "month": "10", 
+            "second": "34", 
+            "time": "13:45:34", 
+            "tz": "UTC", 
+            "tz_offset": "+0000", 
+            "weekday": "Thursday", 
+            "weekday_number": "4", 
+            "weeknumber": "43", 
+            "year": "2018"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "10.0.2.15", 
+            "alias": "eth0", 
+            "broadcast": "10.0.2.255", 
+            "gateway": "10.0.2.2", 
+            "interface": "eth0", 
+            "macaddress": "08:00:27:b5:13:2e", 
+            "mtu": 1500, 
+            "netmask": "255.255.255.0", 
+            "network": "10.0.2.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_devices": {
+            "sda": {
+                "holders": [], 
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sda1": {
+                        "sectors": "83884032", 
+                        "sectorsize": 512, 
+                        "size": "40.00 GB", 
+                        "start": "2048"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "deadline", 
+                "sectors": "83886080", 
+                "sectorsize": "512", 
+                "size": "40.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA"
+            }
+        }, 
+        "ansible_distribution": "Ubuntu", 
+        "ansible_distribution_major_version": "14", 
+        "ansible_distribution_release": "trusty", 
+        "ansible_distribution_version": "14.04", 
+        "ansible_dns": {
+            "nameservers": [
+                "10.0.2.3"
+            ]
+        }, 
+        "ansible_docker0": {
+            "active": false, 
+            "device": "docker0", 
+            "id": "8000.0242dd95cd9c", 
+            "interfaces": [], 
+            "ipv4": {
+                "address": "172.17.0.1", 
+                "broadcast": "172.17.255.255", 
+                "netmask": "255.255.0.0", 
+                "network": "172.17.0.0"
+            }, 
+            "macaddress": "02:42:dd:95:cd:9c", 
+            "mtu": 1500, 
+            "promisc": false, 
+            "stp": false, 
+            "type": "bridge"
+        }, 
+        "ansible_domain": "", 
+        "ansible_env": {
+            "HOME": "/home/vagrant", 
+            "LANG": "en_US.UTF-8", 
+            "LC_ALL": "en_US.UTF-8", 
+            "LC_MESSAGES": "en_US.UTF-8", 
+            "LESSCLOSE": "/usr/bin/lesspipe %s %s", 
+            "LESSOPEN": "| /usr/bin/lesspipe %s", 
+            "LOGNAME": "vagrant", 
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:", 
+            "MAIL": "/var/mail/vagrant", 
+            "OLDPWD": "/home/vagrant", 
+            "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games", 
+            "PWD": "/home/montasar/sources/playbooks", 
+            "SHELL": "/bin/bash", 
+            "SHLVL": "2", 
+            "TERM": "xterm", 
+            "USER": "vagrant", 
+            "XDG_RUNTIME_DIR": "/run/user/1002", 
+            "XDG_SESSION_ID": "2", 
+            "_": "/usr/local/bin/ansible"
+        }, 
+        "ansible_eth0": {
+            "active": true, 
+            "device": "eth0", 
+            "ipv4": {
+                "address": "10.0.2.15", 
+                "broadcast": "10.0.2.255", 
+                "netmask": "255.255.255.0", 
+                "network": "10.0.2.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:feb5:132e", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:b5:13:2e", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:03.0", 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "vagrant-ubuntu-trusty-64", 
+        "ansible_gather_subset": [
+            "hardware", 
+            "network", 
+            "virtual"
+        ], 
+        "ansible_hostname": "vagrant-ubuntu-trusty-64", 
+        "ansible_interfaces": [
+            "lo", 
+            "docker0", 
+            "eth0"
+        ], 
+        "ansible_kernel": "3.13.0-158-generic", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "broadcast": "host", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "type": "loopback"
+        }, 
+        "ansible_lsb": {
+            "codename": "trusty", 
+            "description": "Ubuntu 14.04.5 LTS", 
+            "id": "Ubuntu", 
+            "major_release": "14", 
+            "release": "14.04"
+        }, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "d76967d6d62a69644ddafb8d5bc8921b", 
+        "ansible_memfree_mb": 51, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 256, 
+                "used": 233
+            }, 
+            "real": {
+                "free": 51, 
+                "total": 489, 
+                "used": 438
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 0, 
+                "total": 0, 
+                "used": 0
+            }
+        }, 
+        "ansible_memtotal_mb": 489, 
+        "ansible_mounts": [
+            {
+                "device": "/dev/sda1", 
+                "fstype": "ext4", 
+                "mount": "/", 
+                "options": "rw", 
+                "size_available": 38358937600, 
+                "size_total": 42241163264, 
+                "uuid": ""
+            }
+        ], 
+        "ansible_nodename": "vagrant-ubuntu-trusty-64", 
+        "ansible_os_family": "Debian", 
+        "ansible_pkg_mgr": "apt", 
+        "ansible_processor": [
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz"
+        ], 
+        "ansible_processor_cores": 1, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 1, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "NA", 
+        "ansible_product_uuid": "NA", 
+        "ansible_product_version": "1.2", 
+        "ansible_python": {
+            "executable": "/usr/bin/python", 
+            "has_sslcontext": false, 
+            "type": "CPython", 
+            "version": {
+                "major": 2, 
+                "micro": 6, 
+                "minor": 7, 
+                "releaselevel": "final", 
+                "serial": 0
+            }, 
+            "version_info": [
+                2, 
+                7, 
+                6, 
+                "final", 
+                0
+            ]
+        }, 
+        "ansible_python_version": "2.7.6", 
+        "ansible_selinux": false, 
+        "ansible_service_mgr": "upstart", 
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAJghJAGNpUbJNyKlDPrFZhgDwB4dgw+sW+6ZjlzRFZoIZkmBNNKw294GAavLW+DITvz8tlCphyz57RO7APw2FxDws3KZJxXe5nnmynCB+mFrm7uY1tO7tHfXNU2TG3D4UqicPwIJpnNU3BSeKdmogryMpbDHai1HMC6676RfNmg5AAAAFQDLHiZvMeJ+ZycaVdUVbL794/opawAAAIB7/UicD7CaXHz78trmrb+Xp1q7GxZPztcWr5IVKIrdEz1tXQ8AHu6Q0EOZAf6EdihiFjZw9Pq5aWl3HG11+BO036pTd1OZO80ziRYEMUvcw1bPANEShxaLb1kbehIu0pj0zy/xDdccL59t8IR+i/rGopLMiKPqTyeWl0gUHwvR1QAAAIBhZhjxNG1iQQKPiQ4izhBb+4CVwNpodqHmK5wLaxjJVMPEUZIh6SU37xpFlt9d74lQt6PXZQiBmGQ8XTsAuoFP19wSo3Iq0yiRSUha7RVXmep4Ywq1XuaK5WCCu18vo1KuUJ9ylF84KxoPlYSlbL1IFs4r3580VuwzSh+p858npQ==", 
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK7JBO73Ba0/aiOmiPo3SHBRjHIQmBQgy4Zv3heIYdM1k7LKBLgDa+DQdI96RdTmZmJt6TgApDA3Z011Cizqe3M=", 
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIGsHQXCFXFFWHy+qveBo5dzK+/CLErxSJt0b0tbRWOAq", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCrQbf3sXG/EEsRd9Ytaad67PYN7UlMNxjt5HtSHiWqTtsCF/Sh5K/mOdNAzAv/jaI8csquv5ATslca+1qpV/312jlERzu8nW17pOKwL4sBXggVCM8Dyba9Vw7WabnhFc1mZFH8Mw+pme52nrsWv2/a8PZ28noCzIalnuv9eAY3FdlbIOwW36Z+/fYnRkVpRc/XiqajOKd25vwHsUnoMhG0HdTTLjP/kf+mAVN6ULVwamtbIy9W82ypV4ppDKDfgd1GjZjnKQn1yHLZhtoqQ2dlq08Ac2CFkLAFNmoRhZ3EWvrr9bPvOy3FXzg1oXlYRIIJHVVIs601G978+mYDEbLV", 
+        "ansible_swapfree_mb": 0, 
+        "ansible_swaptotal_mb": 0, 
+        "ansible_system": "Linux", 
+        "ansible_system_capabilities": [
+            ""
+        ], 
+        "ansible_system_capabilities_enforced": "True", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_uptime_seconds": 15979, 
+        "ansible_user_dir": "/home/vagrant", 
+        "ansible_user_gecos": "", 
+        "ansible_user_gid": 1000, 
+        "ansible_user_id": "vagrant", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 1000, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "virtualbox", 
+        "facter_architecture": "amd64", 
+        "facter_augeasversion": "1.2.0", 
+        "facter_blockdevice_sda_model": "VBOX HARDDISK", 
+        "facter_blockdevice_sda_size": 42949672960, 
+        "facter_blockdevice_sda_vendor": "ATA", 
+        "facter_blockdevices": "sda", 
+        "facter_facterversion": "1.7.5", 
+        "facter_filesystems": "ext2,ext3,ext4,vfat", 
+        "facter_hardwareisa": "x86_64", 
+        "facter_hardwaremodel": "x86_64", 
+        "facter_hostname": "vagrant-ubuntu-trusty-64", 
+        "facter_id": "vagrant", 
+        "facter_interfaces": "docker0,eth0,lo", 
+        "facter_ipaddress": "172.17.0.1", 
+        "facter_ipaddress_docker0": "172.17.0.1", 
+        "facter_ipaddress_eth0": "10.0.2.15", 
+        "facter_ipaddress_lo": "127.0.0.1", 
+        "facter_is_virtual": "true", 
+        "facter_kernel": "Linux", 
+        "facter_kernelmajversion": "3.13", 
+        "facter_kernelrelease": "3.13.0-158-generic", 
+        "facter_kernelversion": "3.13.0", 
+        "facter_lsbdistcodename": "trusty", 
+        "facter_lsbdistdescription": "Ubuntu 14.04.5 LTS", 
+        "facter_lsbdistid": "Ubuntu", 
+        "facter_lsbdistrelease": "14.04", 
+        "facter_lsbmajdistrelease": "14", 
+        "facter_macaddress": "02:42:dd:95:cd:9c", 
+        "facter_macaddress_docker0": "02:42:dd:95:cd:9c", 
+        "facter_macaddress_eth0": "08:00:27:b5:13:2e", 
+        "facter_memoryfree": "227.79 MB", 
+        "facter_memoryfree_mb": "227.79", 
+        "facter_memorysize": "489.85 MB", 
+        "facter_memorysize_mb": "489.85", 
+        "facter_memorytotal": "489.85 MB", 
+        "facter_mtu_docker0": "1500", 
+        "facter_mtu_eth0": "1500", 
+        "facter_mtu_lo": "65536", 
+        "facter_netmask": "255.255.0.0", 
+        "facter_netmask_docker0": "255.255.0.0", 
+        "facter_netmask_eth0": "255.255.255.0", 
+        "facter_netmask_lo": "255.0.0.0", 
+        "facter_network_docker0": "172.17.0.0", 
+        "facter_network_eth0": "10.0.2.0", 
+        "facter_network_lo": "127.0.0.0", 
+        "facter_operatingsystem": "Ubuntu", 
+        "facter_operatingsystemrelease": "14.04", 
+        "facter_osfamily": "Debian", 
+        "facter_path": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin:/sbin", 
+        "facter_physicalprocessorcount": 1, 
+        "facter_processor0": "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz", 
+        "facter_processorcount": "1", 
+        "facter_ps": "ps -ef", 
+        "facter_puppetversion": "3.4.3", 
+        "facter_rubysitedir": "/usr/local/lib/site_ruby/1.9.1", 
+        "facter_rubyversion": "1.9.3", 
+        "facter_selinux": "false", 
+        "facter_sshdsakey": "AAAAB3NzaC1kc3MAAACBAJghJAGNpUbJNyKlDPrFZhgDwB4dgw+sW+6ZjlzRFZoIZkmBNNKw294GAavLW+DITvz8tlCphyz57RO7APw2FxDws3KZJxXe5nnmynCB+mFrm7uY1tO7tHfXNU2TG3D4UqicPwIJpnNU3BSeKdmogryMpbDHai1HMC6676RfNmg5AAAAFQDLHiZvMeJ+ZycaVdUVbL794/opawAAAIB7/UicD7CaXHz78trmrb+Xp1q7GxZPztcWr5IVKIrdEz1tXQ8AHu6Q0EOZAf6EdihiFjZw9Pq5aWl3HG11+BO036pTd1OZO80ziRYEMUvcw1bPANEShxaLb1kbehIu0pj0zy/xDdccL59t8IR+i/rGopLMiKPqTyeWl0gUHwvR1QAAAIBhZhjxNG1iQQKPiQ4izhBb+4CVwNpodqHmK5wLaxjJVMPEUZIh6SU37xpFlt9d74lQt6PXZQiBmGQ8XTsAuoFP19wSo3Iq0yiRSUha7RVXmep4Ywq1XuaK5WCCu18vo1KuUJ9ylF84KxoPlYSlbL1IFs4r3580VuwzSh+p858npQ==", 
+        "facter_sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK7JBO73Ba0/aiOmiPo3SHBRjHIQmBQgy4Zv3heIYdM1k7LKBLgDa+DQdI96RdTmZmJt6TgApDA3Z011Cizqe3M=", 
+        "facter_sshfp_dsa": "SSHFP 2 1 372db73bb0e587aaf642505142e4721e80cc1a8b\nSSHFP 2 2 00b0d98a8a3b6864dd1520cbc014f837a6575845df1f56862ffdd5e8f1668ea1", 
+        "facter_sshfp_ecdsa": "SSHFP 3 1 a033e7c80677da56c4499eb50e8e59a218f5c66f\nSSHFP 3 2 297f965a22633a74cdf8095254c38507761815d25a8aed0758cf6186db2c3e15", 
+        "facter_sshfp_rsa": "SSHFP 1 1 17f93e9b6db3a6eb01d7ef34be6fb19e14ec0346\nSSHFP 1 2 3bafbb692620c9957a56567909b3e8ebaab9ce3ac8f305b24856168dc96b8006", 
+        "facter_sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCrQbf3sXG/EEsRd9Ytaad67PYN7UlMNxjt5HtSHiWqTtsCF/Sh5K/mOdNAzAv/jaI8csquv5ATslca+1qpV/312jlERzu8nW17pOKwL4sBXggVCM8Dyba9Vw7WabnhFc1mZFH8Mw+pme52nrsWv2/a8PZ28noCzIalnuv9eAY3FdlbIOwW36Z+/fYnRkVpRc/XiqajOKd25vwHsUnoMhG0HdTTLjP/kf+mAVN6ULVwamtbIy9W82ypV4ppDKDfgd1GjZjnKQn1yHLZhtoqQ2dlq08Ac2CFkLAFNmoRhZ3EWvrr9bPvOy3FXzg1oXlYRIIJHVVIs601G978+mYDEbLV", 
+        "facter_swapfree": "0.00 MB", 
+        "facter_swapfree_mb": "0.00", 
+        "facter_swapsize": "0.00 MB", 
+        "facter_swapsize_mb": "0.00", 
+        "facter_timezone": "UTC", 
+        "facter_uniqueid": "000a0f02", 
+        "facter_uptime": "4:26 hours", 
+        "facter_uptime_days": 0, 
+        "facter_uptime_hours": 4, 
+        "facter_uptime_seconds": 15979, 
+        "facter_virtual": "virtualbox", 
+        "module_setup": true, 
+        "ohai_block_device": {
+            "loop0": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop1": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop2": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop3": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop4": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop5": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop6": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "loop7": {
+                "removable": "0", 
+                "size": "0"
+            }, 
+            "ram0": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram1": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram10": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram11": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram12": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram13": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram14": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram15": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram2": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram3": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram4": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram5": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram6": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram7": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram8": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "ram9": {
+                "removable": "0", 
+                "size": "131072"
+            }, 
+            "sda": {
+                "model": "VBOX HARDDISK", 
+                "removable": "0", 
+                "rev": "1.0", 
+                "size": "83886080", 
+                "state": "running", 
+                "timeout": "30", 
+                "vendor": "ATA"
+            }
+        }, 
+        "ohai_chef_packages": {
+            "chef": {
+                "chef_root": "/usr/lib/ruby/vendor_ruby", 
+                "version": "11.8.2"
+            }, 
+            "ohai": {
+                "ohai_root": "/usr/lib/ruby/vendor_ruby/ohai", 
+                "version": "6.14.0"
+            }
+        }, 
+        "ohai_command": {
+            "ps": "ps -ef"
+        }, 
+        "ohai_counters": {
+            "network": {
+                "interfaces": {
+                    "docker0": {
+                        "rx": {
+                            "bytes": "0", 
+                            "drop": "0", 
+                            "errors": "0", 
+                            "overrun": "0", 
+                            "packets": "0"
+                        }, 
+                        "tx": {
+                            "bytes": "0", 
+                            "carrier": "0", 
+                            "collisions": "0", 
+                            "drop": "0", 
+                            "errors": "0", 
+                            "packets": "0"
+                        }
+                    }, 
+                    "eth0": {
+                        "rx": {
+                            "bytes": "1330410", 
+                            "drop": "0", 
+                            "errors": "0", 
+                            "overrun": "0", 
+                            "packets": "14084"
+                        }, 
+                        "tx": {
+                            "bytes": "5936564", 
+                            "carrier": "0", 
+                            "collisions": "0", 
+                            "drop": "0", 
+                            "errors": "0", 
+                            "packets": "10453", 
+                            "queuelen": "1000"
+                        }
+                    }, 
+                    "lo": {
+                        "rx": {
+                            "bytes": "420", 
+                            "drop": "0", 
+                            "errors": "0", 
+                            "overrun": "0", 
+                            "packets": "5"
+                        }, 
+                        "tx": {
+                            "bytes": "420", 
+                            "carrier": "0", 
+                            "collisions": "0", 
+                            "drop": "0", 
+                            "errors": "0", 
+                            "packets": "5"
+                        }
+                    }
+                }
+            }
+        }, 
+        "ohai_cpu": {
+            "0": {
+                "cache_size": "8192 KB", 
+                "core_id": "0", 
+                "cores": "1", 
+                "family": "6", 
+                "flags": [
+                    "fpu", 
+                    "vme", 
+                    "de", 
+                    "pse", 
+                    "tsc", 
+                    "msr", 
+                    "pae", 
+                    "mce", 
+                    "cx8", 
+                    "apic", 
+                    "sep", 
+                    "mtrr", 
+                    "pge", 
+                    "mca", 
+                    "cmov", 
+                    "pat", 
+                    "pse36", 
+                    "clflush", 
+                    "mmx", 
+                    "fxsr", 
+                    "sse", 
+                    "sse2", 
+                    "syscall", 
+                    "nx", 
+                    "rdtscp", 
+                    "lm", 
+                    "constant_tsc", 
+                    "rep_good", 
+                    "nopl", 
+                    "xtopology", 
+                    "nonstop_tsc", 
+                    "eagerfpu", 
+                    "pni", 
+                    "pclmulqdq", 
+                    "monitor", 
+                    "ssse3", 
+                    "cx16", 
+                    "pcid", 
+                    "sse4_1", 
+                    "sse4_2", 
+                    "movbe", 
+                    "popcnt", 
+                    "aes", 
+                    "xsave", 
+                    "avx", 
+                    "rdrand", 
+                    "lahf_lm", 
+                    "abm", 
+                    "3dnowprefetch", 
+                    "invpcid_single", 
+                    "retpoline", 
+                    "fsgsbase", 
+                    "avx2", 
+                    "invpcid", 
+                    "rdseed"
+                ], 
+                "mhz": "2711.547", 
+                "model": "94", 
+                "model_name": "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz", 
+                "physical_id": "0", 
+                "stepping": "3", 
+                "vendor_id": "GenuineIntel"
+            }, 
+            "real": 1, 
+            "total": 1
+        }, 
+        "ohai_current_user": "montasar", 
+        "ohai_dmi": {}, 
+        "ohai_domain": null, 
+        "ohai_etc": {
+            "group": {
+                "adm": {
+                    "gid": 4, 
+                    "members": [
+                        "syslog", 
+                        "ubuntu"
+                    ]
+                }, 
+                "admin": {
+                    "gid": 110, 
+                    "members": [
+                        "montasar"
+                    ]
+                }, 
+                "audio": {
+                    "gid": 29, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "backup": {
+                    "gid": 34, 
+                    "members": []
+                }, 
+                "bin": {
+                    "gid": 2, 
+                    "members": []
+                }, 
+                "cdrom": {
+                    "gid": 24, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "colord": {
+                    "gid": 112, 
+                    "members": []
+                }, 
+                "crontab": {
+                    "gid": 103, 
+                    "members": []
+                }, 
+                "daemon": {
+                    "gid": 1, 
+                    "members": []
+                }, 
+                "dialout": {
+                    "gid": 20, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "dip": {
+                    "gid": 30, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "disk": {
+                    "gid": 6, 
+                    "members": []
+                }, 
+                "docker": {
+                    "gid": 999, 
+                    "members": []
+                }, 
+                "fax": {
+                    "gid": 21, 
+                    "members": []
+                }, 
+                "floppy": {
+                    "gid": 25, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "fuse": {
+                    "gid": 105, 
+                    "members": []
+                }, 
+                "games": {
+                    "gid": 60, 
+                    "members": []
+                }, 
+                "gnats": {
+                    "gid": 41, 
+                    "members": []
+                }, 
+                "irc": {
+                    "gid": 39, 
+                    "members": []
+                }, 
+                "kmem": {
+                    "gid": 15, 
+                    "members": []
+                }, 
+                "landscape": {
+                    "gid": 109, 
+                    "members": []
+                }, 
+                "libuuid": {
+                    "gid": 101, 
+                    "members": []
+                }, 
+                "list": {
+                    "gid": 38, 
+                    "members": []
+                }, 
+                "lp": {
+                    "gid": 7, 
+                    "members": []
+                }, 
+                "mail": {
+                    "gid": 8, 
+                    "members": []
+                }, 
+                "man": {
+                    "gid": 12, 
+                    "members": []
+                }, 
+                "messagebus": {
+                    "gid": 106, 
+                    "members": []
+                }, 
+                "mlocate": {
+                    "gid": 107, 
+                    "members": []
+                }, 
+                "montasar": {
+                    "gid": 1002, 
+                    "members": []
+                }, 
+                "netdev": {
+                    "gid": 102, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "news": {
+                    "gid": 9, 
+                    "members": []
+                }, 
+                "nogroup": {
+                    "gid": 65534, 
+                    "members": []
+                }, 
+                "operator": {
+                    "gid": 37, 
+                    "members": []
+                }, 
+                "plugdev": {
+                    "gid": 46, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "proxy": {
+                    "gid": 13, 
+                    "members": []
+                }, 
+                "puppet": {
+                    "gid": 114, 
+                    "members": []
+                }, 
+                "root": {
+                    "gid": 0, 
+                    "members": []
+                }, 
+                "sasl": {
+                    "gid": 45, 
+                    "members": []
+                }, 
+                "scanner": {
+                    "gid": 111, 
+                    "members": []
+                }, 
+                "shadow": {
+                    "gid": 42, 
+                    "members": []
+                }, 
+                "src": {
+                    "gid": 40, 
+                    "members": []
+                }, 
+                "ssh": {
+                    "gid": 108, 
+                    "members": []
+                }, 
+                "staff": {
+                    "gid": 50, 
+                    "members": []
+                }, 
+                "sudo": {
+                    "gid": 27, 
+                    "members": [
+                        "ubuntu", 
+                        "montasar"
+                    ]
+                }, 
+                "sys": {
+                    "gid": 3, 
+                    "members": []
+                }, 
+                "syslog": {
+                    "gid": 104, 
+                    "members": []
+                }, 
+                "tape": {
+                    "gid": 26, 
+                    "members": []
+                }, 
+                "tty": {
+                    "gid": 5, 
+                    "members": []
+                }, 
+                "ubuntu": {
+                    "gid": 1001, 
+                    "members": []
+                }, 
+                "users": {
+                    "gid": 100, 
+                    "members": []
+                }, 
+                "utmp": {
+                    "gid": 43, 
+                    "members": []
+                }, 
+                "uucp": {
+                    "gid": 10, 
+                    "members": []
+                }, 
+                "vagrant": {
+                    "gid": 1000, 
+                    "members": []
+                }, 
+                "vboxsf": {
+                    "gid": 113, 
+                    "members": []
+                }, 
+                "video": {
+                    "gid": 44, 
+                    "members": [
+                        "ubuntu"
+                    ]
+                }, 
+                "voice": {
+                    "gid": 22, 
+                    "members": []
+                }, 
+                "www-data": {
+                    "gid": 33, 
+                    "members": []
+                }
+            }, 
+            "passwd": {
+                "backup": {
+                    "dir": "/var/backups", 
+                    "gecos": "backup", 
+                    "gid": 34, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 34
+                }, 
+                "bin": {
+                    "dir": "/bin", 
+                    "gecos": "bin", 
+                    "gid": 2, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 2
+                }, 
+                "colord": {
+                    "dir": "/var/lib/colord", 
+                    "gecos": "colord colour management daemon,,,", 
+                    "gid": 112, 
+                    "shell": "/bin/false", 
+                    "uid": 106
+                }, 
+                "daemon": {
+                    "dir": "/usr/sbin", 
+                    "gecos": "daemon", 
+                    "gid": 1, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 1
+                }, 
+                "games": {
+                    "dir": "/usr/games", 
+                    "gecos": "games", 
+                    "gid": 60, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 5
+                }, 
+                "gnats": {
+                    "dir": "/var/lib/gnats", 
+                    "gecos": "Gnats Bug-Reporting System (admin)", 
+                    "gid": 41, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 41
+                }, 
+                "irc": {
+                    "dir": "/var/run/ircd", 
+                    "gecos": "ircd", 
+                    "gid": 39, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 39
+                }, 
+                "landscape": {
+                    "dir": "/var/lib/landscape", 
+                    "gecos": "", 
+                    "gid": 109, 
+                    "shell": "/bin/false", 
+                    "uid": 103
+                }, 
+                "libuuid": {
+                    "dir": "/var/lib/libuuid", 
+                    "gecos": "", 
+                    "gid": 101, 
+                    "shell": "", 
+                    "uid": 100
+                }, 
+                "list": {
+                    "dir": "/var/list", 
+                    "gecos": "Mailing List Manager", 
+                    "gid": 38, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 38
+                }, 
+                "lp": {
+                    "dir": "/var/spool/lpd", 
+                    "gecos": "lp", 
+                    "gid": 7, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 7
+                }, 
+                "mail": {
+                    "dir": "/var/mail", 
+                    "gecos": "mail", 
+                    "gid": 8, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 8
+                }, 
+                "man": {
+                    "dir": "/var/cache/man", 
+                    "gecos": "man", 
+                    "gid": 12, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 6
+                }, 
+                "messagebus": {
+                    "dir": "/var/run/dbus", 
+                    "gecos": "", 
+                    "gid": 106, 
+                    "shell": "/bin/false", 
+                    "uid": 102
+                }, 
+                "montasar": {
+                    "dir": "/home/montasar", 
+                    "gecos": "", 
+                    "gid": 1002, 
+                    "shell": "", 
+                    "uid": 1002
+                }, 
+                "news": {
+                    "dir": "/var/spool/news", 
+                    "gecos": "news", 
+                    "gid": 9, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 9
+                }, 
+                "nobody": {
+                    "dir": "/nonexistent", 
+                    "gecos": "nobody", 
+                    "gid": 65534, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 65534
+                }, 
+                "pollinate": {
+                    "dir": "/var/cache/pollinate", 
+                    "gecos": "", 
+                    "gid": 1, 
+                    "shell": "/bin/false", 
+                    "uid": 105
+                }, 
+                "proxy": {
+                    "dir": "/bin", 
+                    "gecos": "proxy", 
+                    "gid": 13, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 13
+                }, 
+                "puppet": {
+                    "dir": "/var/lib/puppet", 
+                    "gecos": "Puppet configuration management daemon,,,", 
+                    "gid": 114, 
+                    "shell": "/bin/false", 
+                    "uid": 108
+                }, 
+                "root": {
+                    "dir": "/root", 
+                    "gecos": "root", 
+                    "gid": 0, 
+                    "shell": "/bin/bash", 
+                    "uid": 0
+                }, 
+                "sshd": {
+                    "dir": "/var/run/sshd", 
+                    "gecos": "", 
+                    "gid": 65534, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 104
+                }, 
+                "statd": {
+                    "dir": "/var/lib/nfs", 
+                    "gecos": "", 
+                    "gid": 65534, 
+                    "shell": "/bin/false", 
+                    "uid": 107
+                }, 
+                "sync": {
+                    "dir": "/bin", 
+                    "gecos": "sync", 
+                    "gid": 65534, 
+                    "shell": "/bin/sync", 
+                    "uid": 4
+                }, 
+                "sys": {
+                    "dir": "/dev", 
+                    "gecos": "sys", 
+                    "gid": 3, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 3
+                }, 
+                "syslog": {
+                    "dir": "/home/syslog", 
+                    "gecos": "", 
+                    "gid": 104, 
+                    "shell": "/bin/false", 
+                    "uid": 101
+                }, 
+                "ubuntu": {
+                    "dir": "/home/ubuntu", 
+                    "gecos": "Ubuntu", 
+                    "gid": 1001, 
+                    "shell": "/bin/bash", 
+                    "uid": 1001
+                }, 
+                "uucp": {
+                    "dir": "/var/spool/uucp", 
+                    "gecos": "uucp", 
+                    "gid": 10, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 10
+                }, 
+                "vagrant": {
+                    "dir": "/home/vagrant", 
+                    "gecos": "", 
+                    "gid": 1000, 
+                    "shell": "/bin/bash", 
+                    "uid": 1000
+                }, 
+                "www-data": {
+                    "dir": "/var/www", 
+                    "gecos": "www-data", 
+                    "gid": 33, 
+                    "shell": "/usr/sbin/nologin", 
+                    "uid": 33
+                }
+            }
+        }, 
+        "ohai_fqdn": "vagrant-ubuntu-trusty-64", 
+        "ohai_hostname": "vagrant-ubuntu-trusty-64", 
+        "ohai_idletime": "4 hours 23 minutes 54 seconds", 
+        "ohai_idletime_seconds": 15834, 
+        "ohai_ipaddress": "10.0.2.15", 
+        "ohai_kernel": {
+            "machine": "x86_64", 
+            "modules": {
+                "ablk_helper": {
+                    "refcount": "1", 
+                    "size": "13597"
+                }, 
+                "aes_x86_64": {
+                    "refcount": "1", 
+                    "size": "17131"
+                }, 
+                "aesni_intel": {
+                    "refcount": "0", 
+                    "size": "55624"
+                }, 
+                "ahci": {
+                    "refcount": "1", 
+                    "size": "34091"
+                }, 
+                "aufs": {
+                    "refcount": "0", 
+                    "size": "202738"
+                }, 
+                "auth_rpcgss": {
+                    "refcount": "1", 
+                    "size": "59309"
+                }, 
+                "bridge": {
+                    "refcount": "0", 
+                    "size": "110972"
+                }, 
+                "crc32_pclmul": {
+                    "refcount": "0", 
+                    "size": "13113"
+                }, 
+                "crct10dif_pclmul": {
+                    "refcount": "0", 
+                    "size": "14289"
+                }, 
+                "cryptd": {
+                    "refcount": "3", 
+                    "size": "20359"
+                }, 
+                "dm_crypt": {
+                    "refcount": "0", 
+                    "size": "23177"
+                }, 
+                "e1000": {
+                    "refcount": "0", 
+                    "size": "145227"
+                }, 
+                "fscache": {
+                    "refcount": "1", 
+                    "size": "64043"
+                }, 
+                "gf128mul": {
+                    "refcount": "1", 
+                    "size": "14951"
+                }, 
+                "ghash_clmulni_intel": {
+                    "refcount": "0", 
+                    "size": "13302"
+                }, 
+                "glue_helper": {
+                    "refcount": "1", 
+                    "size": "13990"
+                }, 
+                "ip_tables": {
+                    "refcount": "2", 
+                    "size": "27116"
+                }, 
+                "ipt_MASQUERADE": {
+                    "refcount": "1", 
+                    "size": "12880"
+                }, 
+                "iptable_filter": {
+                    "refcount": "1", 
+                    "size": "12810"
+                }, 
+                "iptable_nat": {
+                    "refcount": "1", 
+                    "size": "13011"
+                }, 
+                "joydev": {
+                    "refcount": "0", 
+                    "size": "17381"
+                }, 
+                "libahci": {
+                    "refcount": "1", 
+                    "size": "32716"
+                }, 
+                "llc": {
+                    "refcount": "2", 
+                    "size": "14552"
+                }, 
+                "lockd": {
+                    "refcount": "2", 
+                    "size": "93913"
+                }, 
+                "lrw": {
+                    "refcount": "1", 
+                    "size": "13286"
+                }, 
+                "nf_conntrack": {
+                    "refcount": "7", 
+                    "size": "97201"
+                }, 
+                "nf_conntrack_ipv4": {
+                    "refcount": "2", 
+                    "size": "15012"
+                }, 
+                "nf_conntrack_netlink": {
+                    "refcount": "0", 
+                    "size": "36223"
+                }, 
+                "nf_defrag_ipv4": {
+                    "refcount": "1", 
+                    "size": "12758"
+                }, 
+                "nf_nat": {
+                    "refcount": "3", 
+                    "size": "21841"
+                }, 
+                "nf_nat_ipv4": {
+                    "refcount": "1", 
+                    "size": "13263"
+                }, 
+                "nfnetlink": {
+                    "refcount": "2", 
+                    "size": "14606"
+                }, 
+                "nfs": {
+                    "refcount": "0", 
+                    "size": "240815"
+                }, 
+                "nfs_acl": {
+                    "refcount": "1", 
+                    "size": "12837"
+                }, 
+                "nfsd": {
+                    "refcount": "2", 
+                    "size": "284396"
+                }, 
+                "psmouse": {
+                    "refcount": "0", 
+                    "size": "110788"
+                }, 
+                "serio_raw": {
+                    "refcount": "0", 
+                    "size": "13462"
+                }, 
+                "stp": {
+                    "refcount": "1", 
+                    "size": "12976"
+                }, 
+                "sunrpc": {
+                    "refcount": "6", 
+                    "size": "293313"
+                }, 
+                "vboxguest": {
+                    "refcount": "2", 
+                    "size": "249035"
+                }, 
+                "vboxsf": {
+                    "refcount": "5", 
+                    "size": "43798"
+                }, 
+                "video": {
+                    "refcount": "0", 
+                    "size": "19476"
+                }, 
+                "x_tables": {
+                    "refcount": "5", 
+                    "size": "34802"
+                }, 
+                "xfrm_algo": {
+                    "refcount": "1", 
+                    "size": "15394"
+                }, 
+                "xfrm_user": {
+                    "refcount": "1", 
+                    "size": "31092"
+                }, 
+                "xt_addrtype": {
+                    "refcount": "2", 
+                    "size": "12635"
+                }, 
+                "xt_conntrack": {
+                    "refcount": "1", 
+                    "size": "12760"
+                }
+            }, 
+            "name": "Linux", 
+            "os": "GNU/Linux", 
+            "release": "3.13.0-158-generic", 
+            "version": "#208-Ubuntu SMP Fri Aug 24 17:07:38 UTC 2018"
+        }, 
+        "ohai_keys": {
+            "ssh": {
+                "host_dsa_public": "AAAAB3NzaC1kc3MAAACBAJghJAGNpUbJNyKlDPrFZhgDwB4dgw+sW+6ZjlzRFZoIZkmBNNKw294GAavLW+DITvz8tlCphyz57RO7APw2FxDws3KZJxXe5nnmynCB+mFrm7uY1tO7tHfXNU2TG3D4UqicPwIJpnNU3BSeKdmogryMpbDHai1HMC6676RfNmg5AAAAFQDLHiZvMeJ+ZycaVdUVbL794/opawAAAIB7/UicD7CaXHz78trmrb+Xp1q7GxZPztcWr5IVKIrdEz1tXQ8AHu6Q0EOZAf6EdihiFjZw9Pq5aWl3HG11+BO036pTd1OZO80ziRYEMUvcw1bPANEShxaLb1kbehIu0pj0zy/xDdccL59t8IR+i/rGopLMiKPqTyeWl0gUHwvR1QAAAIBhZhjxNG1iQQKPiQ4izhBb+4CVwNpodqHmK5wLaxjJVMPEUZIh6SU37xpFlt9d74lQt6PXZQiBmGQ8XTsAuoFP19wSo3Iq0yiRSUha7RVXmep4Ywq1XuaK5WCCu18vo1KuUJ9ylF84KxoPlYSlbL1IFs4r3580VuwzSh+p858npQ==", 
+                "host_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCrQbf3sXG/EEsRd9Ytaad67PYN7UlMNxjt5HtSHiWqTtsCF/Sh5K/mOdNAzAv/jaI8csquv5ATslca+1qpV/312jlERzu8nW17pOKwL4sBXggVCM8Dyba9Vw7WabnhFc1mZFH8Mw+pme52nrsWv2/a8PZ28noCzIalnuv9eAY3FdlbIOwW36Z+/fYnRkVpRc/XiqajOKd25vwHsUnoMhG0HdTTLjP/kf+mAVN6ULVwamtbIy9W82ypV4ppDKDfgd1GjZjnKQn1yHLZhtoqQ2dlq08Ac2CFkLAFNmoRhZ3EWvrr9bPvOy3FXzg1oXlYRIIJHVVIs601G978+mYDEbLV"
+            }
+        }, 
+        "ohai_languages": {
+            "perl": {
+                "archname": "x86_64-linux-gnu-thread-multi", 
+                "version": "5.18.2"
+            }, 
+            "python": {
+                "builddate": "Nov 23 2017, 15:49:48", 
+                "version": "2.7.6"
+            }, 
+            "ruby": {
+                "bin_dir": "/usr/bin", 
+                "gem_bin": "/usr/bin/gem1.9.1", 
+                "gems_dir": "/var/lib/gems/1.9.1", 
+                "host": "x86_64-pc-linux-gnu", 
+                "host_cpu": "x86_64", 
+                "host_os": "linux-gnu", 
+                "host_vendor": "pc", 
+                "platform": "x86_64-linux", 
+                "release_date": "2013-11-22", 
+                "ruby_bin": "/usr/bin/ruby1.9.1", 
+                "target": "x86_64-pc-linux-gnu", 
+                "target_cpu": "x86_64", 
+                "target_os": "linux", 
+                "target_vendor": "pc", 
+                "version": "1.9.3"
+            }
+        }, 
+        "ohai_lsb": {
+            "codename": "trusty", 
+            "description": "Ubuntu 14.04.5 LTS", 
+            "id": "Ubuntu", 
+            "release": "14.04"
+        }, 
+        "ohai_macaddress": "08:00:27:B5:13:2E", 
+        "ohai_memory": {
+            "active": "255520kB", 
+            "anon_pages": "201028kB", 
+            "bounce": "0kB", 
+            "buffers": "16540kB", 
+            "cached": "194508kB", 
+            "commit_limit": "250800kB", 
+            "committed_as": "444228kB", 
+            "dirty": "244kB", 
+            "free": "40896kB", 
+            "inactive": "156564kB", 
+            "mapped": "61364kB", 
+            "nfs_unstable": "0kB", 
+            "page_tables": "4680kB", 
+            "slab": "29100kB", 
+            "slab_reclaimable": "20040kB", 
+            "slab_unreclaim": "9060kB", 
+            "swap": {
+                "cached": "0kB", 
+                "free": "0kB", 
+                "total": "0kB"
+            }, 
+            "total": "501604kB", 
+            "vmalloc_chunk": "34359712760kB", 
+            "vmalloc_total": "34359738367kB", 
+            "vmalloc_used": "19752kB", 
+            "writeback": "0kB"
+        }, 
+        "ohai_network": {
+            "default_gateway": "10.0.2.2", 
+            "default_interface": "eth0", 
+            "interfaces": {
+                "docker0": {
+                    "addresses": {
+                        "02:42:DD:95:CD:9C": {
+                            "family": "lladdr"
+                        }, 
+                        "172.17.0.1": {
+                            "broadcast": "172.17.255.255", 
+                            "family": "inet", 
+                            "netmask": "255.255.0.0", 
+                            "prefixlen": "16", 
+                            "scope": "Global"
+                        }
+                    }, 
+                    "encapsulation": "Ethernet", 
+                    "flags": [
+                        "BROADCAST", 
+                        "MULTICAST", 
+                        "UP"
+                    ], 
+                    "mtu": "1500", 
+                    "number": "0", 
+                    "routes": [
+                        {
+                            "destination": "172.17.0.0/16", 
+                            "family": "inet", 
+                            "proto": "kernel", 
+                            "scope": "link", 
+                            "src": "172.17.0.1"
+                        }
+                    ], 
+                    "state": "down", 
+                    "type": "docker"
+                }, 
+                "eth0": {
+                    "addresses": {
+                        "08:00:27:B5:13:2E": {
+                            "family": "lladdr"
+                        }, 
+                        "10.0.2.15": {
+                            "broadcast": "10.0.2.255", 
+                            "family": "inet", 
+                            "netmask": "255.255.255.0", 
+                            "prefixlen": "24", 
+                            "scope": "Global"
+                        }, 
+                        "fe80::a00:27ff:feb5:132e": {
+                            "family": "inet6", 
+                            "prefixlen": "64", 
+                            "scope": "Link"
+                        }
+                    }, 
+                    "arp": {
+                        "10.0.2.2": "52:54:00:12:35:02", 
+                        "10.0.2.3": "52:54:00:12:35:03"
+                    }, 
+                    "encapsulation": "Ethernet", 
+                    "flags": [
+                        "BROADCAST", 
+                        "MULTICAST", 
+                        "UP", 
+                        "LOWER_UP"
+                    ], 
+                    "mtu": "1500", 
+                    "number": "0", 
+                    "routes": [
+                        {
+                            "destination": "default", 
+                            "family": "inet", 
+                            "via": "10.0.2.2"
+                        }, 
+                        {
+                            "destination": "10.0.2.0/24", 
+                            "family": "inet", 
+                            "proto": "kernel", 
+                            "scope": "link", 
+                            "src": "10.0.2.15"
+                        }, 
+                        {
+                            "destination": "fe80::/64", 
+                            "family": "inet6", 
+                            "metric": "256", 
+                            "proto": "kernel"
+                        }
+                    ], 
+                    "state": "up", 
+                    "type": "eth"
+                }, 
+                "lo": {
+                    "addresses": {
+                        "127.0.0.1": {
+                            "family": "inet", 
+                            "netmask": "255.0.0.0", 
+                            "prefixlen": "8", 
+                            "scope": "Node"
+                        }, 
+                        "::1": {
+                            "family": "inet6", 
+                            "prefixlen": "128", 
+                            "scope": "Node"
+                        }
+                    }, 
+                    "encapsulation": "Loopback", 
+                    "flags": [
+                        "LOOPBACK", 
+                        "UP", 
+                        "LOWER_UP"
+                    ], 
+                    "mtu": "65536", 
+                    "state": "unknown"
+                }
+            }, 
+            "listeners": {
+                "tcp": {
+                    "111": {
+                        "address": "*", 
+                        "name": "", 
+                        "pid": 0
+                    }, 
+                    "22": {
+                        "address": "*", 
+                        "name": "", 
+                        "pid": 0
+                    }, 
+                    "59174": {
+                        "address": "*", 
+                        "name": "", 
+                        "pid": 0
+                    }, 
+                    "60179": {
+                        "address": "*", 
+                        "name": "", 
+                        "pid": 0
+                    }
+                }
+            }
+        }, 
+        "ohai_ohai_time": 1540475133.94692, 
+        "ohai_os": "linux", 
+        "ohai_os_version": "3.13.0-158-generic", 
+        "ohai_platform": "ubuntu", 
+        "ohai_platform_family": "debian", 
+        "ohai_platform_version": "14.04", 
+        "ohai_uptime": "4 hours 26 minutes 19 seconds", 
+        "ohai_uptime_seconds": 15979, 
+        "ohai_virtualization": {
+            "role": "guest", 
+            "system": "vbox"
+        }
+    }, 
+    "changed": false
+}
