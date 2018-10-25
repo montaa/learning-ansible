@@ -14,6 +14,7 @@ ansible all  -i /home/montasar/inventory/hosts -m copy -a "dest=/tmp/helloworld.
 
 #Replace « World » with ansible user name
 ansible all  -i /home/montasar/inventory/hosts -m replace -a "dest=/tmp/helloworld.txt replace='Hello $(whoami)' regexp='Hello World'"
+ansible all  -i /home/montasar/inventory/hosts -m replace -a "dest=/tmp/helloworld.txt replace='Hello {{ ansible_ssh_user }}' regexp='Hello World'"
 
 #Download prebuild elastic search v 2.4.1 to /tmp/elasticsearch-2.4.1.tar.gz
 ansible all  -i /home/montasar/inventory/hosts -m get_url -a "dest=/tmp/elasticsearch-2.4.1.tar.gz url='https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz'"
